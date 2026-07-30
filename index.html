@@ -1,32 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Wedding Invitation" />
-<meta name="theme-color" content="#faf6f0" />
-<title id="page-title">Wedding Invitation</title>
+<meta name="description" content="Zemfira's Birthday Celebration Invitation" />
+<title id="page-title">Zemfira's Birthday Celebration</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
 
 <style>
   :root {
-    --cream: #faf6f0;
-    --blush: #e8c4b8;
-    --rose: #8b4a5c;
-    --gold: #c9a961;
-    --sage: #9caf88;
-    --ink: #2c2420;
-    --muted: #6b5e56;
-    --shadow: 0 10px 40px rgba(139, 74, 92, 0.12);
-    --radius: 8px;
+    --bg-color: #121212;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --gold: #dfb36b;
+    --gold-light: #f3d498;
+    --text-main: #f5f5f5;
+    --text-muted: #b0b0b0;
+    --accent: #d4af37;
     --transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     --font-display: 'Playfair Display', serif;
-    --font-body: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
     --font-script: 'Great Vibes', cursive;
   }
 
@@ -34,155 +30,133 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--font-body);
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--ink);
-    background: var(--cream);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-main);
+    background: var(--bg-color);
     overflow-x: hidden;
   }
   img { max-width: 100%; display: block; }
   a { color: inherit; text-decoration: none; }
   button { font: inherit; cursor: pointer; border: none; background: none; }
 
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.02em; }
-  
-  .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.03em; }
+
+  .container { width: 90%; max-width: 1000px; margin: 0 auto; }
   section { padding: 100px 0; position: relative; }
-  .section-title { text-align: center; margin-bottom: 60px; }
+  
+  .section-title { text-align: center; margin-bottom: 50px; }
   .section-title small {
     display: block;
     font-family: var(--font-script);
     color: var(--gold);
-    font-size: 2rem;
-    margin-bottom: 8px;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
   }
-  .section-title h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--rose); }
+  .section-title h2 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--text-main); }
+  
   .divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin: 20px 0;
-    color: var(--gold);
+    display: flex; align-items: center; justify-content: center; gap: 15px; margin: 20px 0; color: var(--gold);
   }
   .divider::before, .divider::after {
-    content: ''; height: 1px; width: 60px; background: var(--gold); opacity: 0.5;
+    content: ''; height: 1px; width: 50px; background: var(--gold); opacity: 0.4;
   }
 
   /* Navigation */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 0;
-    background: rgba(250, 246, 240, 0); transition: var(--transition);
-  }
-  nav.scrolled {
-    background: rgba(250, 246, 240, 0.96); backdrop-filter: blur(10px);
-    padding: 12px 0; box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(10px); transition: var(--transition);
   }
   .nav-inner { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
   .nav-inner a {
     font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 0.15em;
-    text-transform: uppercase; color: var(--ink); position: relative; padding: 4px 0;
+    text-transform: uppercase; color: var(--text-muted); transition: var(--transition);
   }
+  .nav-inner a:hover { color: var(--gold); }
 
-  /* Hero */
+  /* Hero Section */
   .hero {
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    text-align: center; color: #fff; position: relative;
-    background: linear-gradient(rgba(44, 36, 32, 0.4), rgba(44, 36, 32, 0.6)),
-                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    text-align: center; position: relative;
+    background: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.9)),
+                url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     padding: 120px 20px 80px;
   }
-  .hero-content { max-width: 800px; }
-  .hero small { font-family: var(--font-script); font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--gold); display: block; margin-bottom: 12px; }
-  .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1; margin-bottom: 20px; font-style: italic; }
-  .hero h1 span { display: block; font-style: normal; }
-  .hero .amp { font-family: var(--font-script); color: var(--gold); font-size: 0.6em; margin: -10px 0; }
-  .hero .date { font-family: var(--font-display); letter-spacing: 0.3em; text-transform: uppercase; font-size: 1rem; margin-top: 30px; }
-  .hero .date strong { color: var(--gold); }
+  .hero-content { max-width: 800px; animation: fadeUp 1.2s ease-out; }
+  .hero small { font-family: var(--font-script); font-size: clamp(2rem, 4vw, 3rem); color: var(--gold); display: block; margin-bottom: 10px; }
+  .hero h1 { font-size: clamp(3.5rem, 9vw, 6.5rem); line-height: 1.1; margin-bottom: 20px; color: #fff; }
+  .hero .date-badge {
+    display: inline-block; padding: 10px 25px; border: 1px solid var(--gold);
+    border-radius: 50px; font-family: var(--font-display); letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold-light); margin-top: 20px; background: rgba(0,0,0,0.3);
+  }
 
   /* Countdown */
-  .countdown { display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
+  .countdown { display: flex; justify-content: center; gap: 15px; margin-top: 40px; flex-wrap: wrap; }
   .countdown .unit {
-    background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
-    border: 1px solid rgba(201, 169, 97, 0.4); padding: 15px 20px; min-width: 90px; border-radius: var(--radius);
+    background: var(--card-bg); backdrop-filter: blur(8px);
+    border: 1px solid rgba(223, 179, 107, 0.3); padding: 15px 20px; min-width: 85px; border-radius: 8px;
   }
-  .countdown .num { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold); display: block; line-height: 1; }
-  .countdown .label { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 6px; }
+  .countdown .num { font-family: var(--font-display); font-size: 2rem; color: var(--gold); display: block; }
+  .countdown .label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
 
-  /* Story */
-  .story { background: #fff; }
-  .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .story-img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover; }
-  .story-text p { margin-bottom: 18px; color: var(--muted); font-size: 1.1rem; }
-
-  /* Events & Details */
-  .events { background: var(--cream); }
-  .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-  .event-card {
-    background: #fff; padding: 40px 30px; text-align: center;
-    border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(201, 169, 97, 0.15);
+  /* Details Grid */
+  .details { background: #181818; }
+  .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+  .detail-card {
+    background: var(--card-bg); padding: 40px 30px; text-align: center;
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: var(--transition);
   }
-  .event-card h3 { font-size: 1.5rem; color: var(--rose); margin-bottom: 12px; }
-  .event-card .time { font-family: var(--font-display); color: var(--gold); letter-spacing: 0.15em; font-size: 0.9rem; margin-bottom: 10px; }
+  .detail-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+  .detail-icon { font-size: 2.5rem; margin-bottom: 20px; }
+  .detail-card h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--gold-light); }
+  .detail-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-  /* Gallery */
-  .gallery { background: #fff; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
-  .gallery-item { overflow: hidden; border-radius: var(--radius); aspect-ratio: 1; position: relative; }
-  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-  .gallery-item:hover img { transform: scale(1.05); }
-
-  /* RSVP */
+  /* RSVP Form */
   .rsvp {
-    background: linear-gradient(rgba(44, 36, 32, 0.85), rgba(44, 36, 32, 0.85)),
-                url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
-    color: #fff;
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)),
+                url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
   }
-  .rsvp .section-title h2 { color: #fff; }
   .rsvp-form {
-    max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px); padding: 40px; border-radius: var(--radius); border: 1px solid rgba(201, 169, 97, 0.3);
+    max-width: 600px; margin: 0 auto; background: var(--card-bg);
+    backdrop-filter: blur(12px); padding: 40px; border-radius: 12px; border: 1px solid rgba(223, 179, 107, 0.2);
   }
   .form-group { margin-bottom: 20px; }
-  .form-group label { display: block; font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
+  .form-group label { display: block; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
   .form-group input, .form-group select, .form-group textarea {
-    width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: var(--radius); color: #fff; font-family: var(--font-body); font-size: 1rem;
+    width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px; color: #fff; font-family: var(--font-body); font-size: 1rem; transition: var(--transition);
   }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--gold); }
+  .form-group select option { background: #222; color: #fff; }
   .btn {
-    display: inline-block; padding: 15px 30px; background: var(--gold); color: #fff;
-    font-family: var(--font-display); letter-spacing: 0.2em; text-transform: uppercase;
-    font-size: 0.85rem; border-radius: var(--radius); width: 100%; transition: var(--transition);
+    display: inline-block; width: 100%; padding: 15px; background: var(--gold); color: #121212;
+    font-family: var(--font-display); font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+    border-radius: 6px; transition: var(--transition); cursor: pointer;
   }
-  .btn:hover { background: var(--rose); }
-  .form-message { margin-top: 15px; text-align: center; padding: 10px; border-radius: var(--radius); display: none; }
-  .form-message.success { background: rgba(156, 175, 136, 0.4); display: block; }
+  .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .form-message { margin-top: 15px; text-align: center; padding: 10px; border-radius: 6px; display: none; background: rgba(223, 179, 107, 0.2); color: var(--gold-light); }
 
-  footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 40px 20px; }
-  footer .names { font-family: var(--font-script); font-size: 2.5rem; color: var(--gold); margin-bottom: 8px; }
+  footer { background: #0d0d0d; color: var(--text-muted); text-align: center; padding: 40px 20px; }
+  footer .names { font-family: var(--font-script); font-size: 2.5rem; color: var(--gold); margin-bottom: 5px; }
 
-  @media (max-width: 768px) {
-    .story-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
 <body>
 
-<!-- ================= CONFIGURATION AREA ================= -->
-<!-- Հաճախորդի կամ ձեր փոփոխությունները կատարելու համար ուղղակի փոխեք այս արժեքները -->
+<!-- ================= ԿԱՐԳԱՎՈՐՈՒՄՆԵՐԻ ԲԼՈԿ (Այստեղից կարող եք փոխել տվյալները) ================= -->
 <script id="site-config">
   const siteData = {
-    partner1: "Emma",
-    partner2: "James",
-    weddingDate: "2026-07-29T16:00:00", // Ձևաչափը՝ ՏՏՏՏ-ԱԱ-ՕՕՏԺԺ:ՐՐ:ՎՎ
-    dateFormatted: "Wednesday • July 29, 2026 • 4:00 PM",
-    locationName: "Tuscany Hills, California",
-    storyText1: "It was a crisp autumn afternoon when our paths first crossed at a small bookshop in the heart of the city...",
-    storyText2: "What began as a chance encounter blossomed into countless coffee dates and shared dreams...",
-    ceremonyLocation: "Rosewood Chapel, 123 Garden Lane",
-    receptionLocation: "Villa Serena Gardens, 456 Olive Grove Road"
+    heroTitle: "Zemfira",
+    birthdayDate: "2026-08-02T18:00:00", // Օգոստոսի 2, 2026, ժամը 18:00
+    dateString: "Sunday • August 2, 2026 • 6:00 PM",
+    locationName: "Grand Hall Restaurant, Yerevan",
+    dressCodeText: "Cocktail Attire (Black & Gold style preferred)",
+    programText: "Welcome drinks, live music, festive dinner and birthday cake at 9:00 PM."
   };
 </script>
 
@@ -190,9 +164,7 @@
 <nav>
   <div class="container nav-inner">
     <a href="#home">Home</a>
-    <a href="#story">Our Story</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#details">Details</a>
     <a href="#rsvp">RSVP</a>
   </div>
 </nav>
@@ -200,14 +172,10 @@
 <!-- Hero -->
 <header class="hero" id="home">
   <div class="hero-content">
-    <small>We're getting married</small>
-    <h1>
-      <span id="hero-p1">Emma</span>
-      <span class="amp">&amp;</span>
-      <span id="hero-p2">James</span>
-    </h1>
+    <small>You're invited to the birthday of</small>
+    <h1 id="main-name">Zemfira</h1>
     <div class="divider">✦</div>
-    <p class="date" id="hero-date">Wednesday • July 29, 2026 • 4:00 PM</p>
+    <div class="date-badge" id="hero-date">Sunday • August 2, 2026 • 6:00 PM</div>
 
     <div class="countdown">
       <div class="unit"><span class="num" id="days">0</span><span class="label">Days</span></div>
@@ -218,140 +186,94 @@
   </div>
 </header>
 
-<!-- Story -->
-<section class="story" id="story">
-  <div class="container">
-    <div class="section-title">
-      <small>How it all began</small>
-      <h2>Our Love Story</h2>
-      <div class="divider">❦</div>
-    </div>
-    <div class="story-grid">
-      <img class="story-img" src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80" alt="Couple" />
-      <div class="story-text">
-        <p id="story-p1">It was a crisp autumn afternoon...</p>
-        <p id="story-p2">What began as a chance encounter...</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Events -->
-<section class="events" id="events">
+<!-- Details Section -->
+<section class="details" id="details">
   <div class="container">
     <div class="section-title">
       <small>Save the date</small>
-      <h2>Wedding Events</h2>
-      <div class="divider">❦</div>
+      <h2>Event Details</h2>
+      <div class="divider">✦</div>
     </div>
-    <div class="events-grid">
-      <article class="event-card">
-        <h3>The Ceremony</h3>
-        <p class="time">4:00 PM</p>
-        <p id="event-ceremony">Rosewood Chapel, 123 Garden Lane</p>
-      </article>
-      <article class="event-card">
-        <h3>The Reception</h3>
-        <p class="time">6:30 PM</p>
-        <p id="event-reception">Villa Serena Gardens, 456 Olive Grove Road</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section class="gallery" id="gallery">
-  <div class="container">
-    <div class="section-title">
-      <small>Moments we cherish</small>
-      <h2>Our Gallery</h2>
-      <div class="divider">❦</div>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" /></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" /></div>
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="detail-icon">📍</div>
+        <h3>Location</h3>
+        <p id="det-location">Grand Hall Restaurant, Yerevan</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">✨</div>
+        <h3>Dress Code</h3>
+        <p id="det-dress">Cocktail Attire (Black & Gold style preferred)</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">🎉</div>
+        <h3>Program</h3>
+        <p id="det-program">Welcome drinks, live music, festive dinner and birthday cake at 9:00 PM.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- RSVP -->
+<!-- RSVP Section -->
 <section class="rsvp" id="rsvp">
   <div class="container">
     <div class="section-title">
-      <small>Will you join us?</small>
-      <h2>Kindly Respond</h2>
-      <div class="divider">❦</div>
+      <small>Can you make it?</small>
+      <h2>RSVP</h2>
+      <div class="divider">✦</div>
     </div>
     <form class="rsvp-form" id="rsvpForm">
       <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" required name="name" />
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" required name="email" />
-        </div>
-        <div class="form-group">
-          <label>Guests</label>
-          <select name="guests">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
+        <label>Your Full Name</label>
+        <input type="text" required name="name" placeholder="Enter your name" />
       </div>
       <div class="form-group">
         <label>Will you attend?</label>
         <select name="attendance">
-          <option value="yes">Joyfully Accepts</option>
-          <option value="no">Regretfully Declines</option>
+          <option value="yes">Joyfully Accepts (I will be there!)</option>
+          <option value="no">Regretfully Declines (Can't make it)</option>
         </select>
       </div>
       <button type="submit" class="btn">Send RSVP</button>
-      <div class="form-message success" id="formMsg">Thank you! Your RSVP has been received.</div>
+      <div class="form-message" id="formMsg">✨ Thank you! Your response has been recorded.</div>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="names" id="footer-names">Emma &amp; James</div>
-  <p id="footer-location">Tuscany Hills, California</p>
+  <div class="names" id="footer-name">Zemfira</div>
+  <p>August 2, 2026 — Looking forward to celebrating with you!</p>
 </footer>
 
 <script>
-  // Dynamic Content Injector based on siteData config
-  document.getElementById('page-title').textContent = `${siteData.partner1} & ${siteData.partner2} — Wedding Invitation`;
-  document.getElementById('hero-p1').textContent = siteData.partner1;
-  document.getElementById('hero-p2').textContent = siteData.partner2;
-  document.getElementById('hero-date').textContent = siteData.dateFormatted;
-  document.getElementById('story-p1').textContent = siteData.storyText1;
-  document.getElementById('story-p2').textContent = siteData.storyText2;
-  document.getElementById('event-ceremony').textContent = siteData.ceremonyLocation;
-  document.getElementById('event-reception').textContent = siteData.receptionLocation;
-  document.getElementById('footer-names').innerHTML = `${siteData.partner1} &amp; ${siteData.partner2}`;
-  document.getElementById('footer-location').textContent = siteData.locationName;
+  // Տվյալների դինամիկ տեղադրում կոնֆիգուրացիայից
+  document.getElementById('page-title').textContent = `${siteData.heroTitle}'s Birthday Celebration`;
+  document.getElementById('main-name').textContent = siteData.heroTitle;
+  document.getElementById('hero-date').textContent = siteData.dateString;
+  document.getElementById('det-location').textContent = siteData.locationName;
+  document.getElementById('det-dress').textContent = siteData.dressCodeText;
+  document.getElementById('det-program').textContent = siteData.programText;
+  document.getElementById('footer-name').textContent = siteData.heroTitle;
 
-  // Countdown timer logic
-  const weddingTime = new Date(siteData.weddingDate).getTime();
+  // Հետհաշվարկի ֆունկցիա (Countdown)
+  const targetTime = new Date(siteData.birthdayDate).getTime();
   setInterval(() => {
-    const diff = weddingTime - Date.now();
+    const diff = targetTime - Date.now();
     if (diff > 0) {
       document.getElementById('days').textContent = Math.floor(diff / 86400000);
-      document.getElementById('hours').textContent = Math.floor((diff % 86400000) / 3600000);
-      document.getElementById('minutes').textContent = Math.floor((diff % 3600000) / 60000);
-      document.getElementById('seconds').textContent = Math.floor((diff % 60000) / 1000);
+      document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
     }
   }, 1000);
 
-  // RSVP simple simulation
+  // RSVP ձևաթղթի գործարկում
   document.getElementById('rsvpForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const msg = document.getElementById('formMsg');
     msg.style.display = 'block';
     e.target.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 5000);
   });
 </script>
 </body>
