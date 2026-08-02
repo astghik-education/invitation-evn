@@ -12,19 +12,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* ============ COLOR PALETTE ============ */
+  /* ============ WARM COLOR PALETTE ============ */
   :root {
-    --mocha: #8B6F47;
-    --mocha-dark: #5C4A30;
-    --mocha-light: #A4845C;
-    --cream: #FAF3E7;
-    --cream-soft: #F5EBD8;
-    --sage: #B8CFA8;
-    --sage-light: #D4E3C4;
-    --sage-dark: #8FA87D;
-    --gold: #C9A96E;
-    --text-dark: #3D3428;
-    --text-light: #6B5D4A;
+    --rose-gold: #B76E79;
+    --rose-gold-dark: #8B4A54;
+    --rose-gold-light: #D4A5A5;
+    --blush: #F8E8E8;
+    --blush-soft: #FDF5F5;
+    --burgundy: #722F37;
+    --burgundy-light: #8B3A42;
+    --ivory: #FFF8F0;
+    --ivory-warm: #FFFAF5;
+    --peach: #FFDAB9;
+    --peach-light: #FFE5CC;
+    --champagne: #D4AF37;
+    --champagne-light: #E8C547;
+    --text-dark: #4A2C2A;
+    --text-medium: #6B4A47;
+    --text-light: #8B6B68;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,7 +38,7 @@
 
   body {
     font-family: 'Montserrat', 'Noto Sans Armenian', sans-serif;
-    background: var(--cream);
+    background: var(--ivory);
     color: var(--text-dark);
     line-height: 1.7;
     overflow-x: hidden;
@@ -42,13 +47,13 @@
   h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
-    color: var(--mocha-dark);
+    color: var(--burgundy);
     letter-spacing: 1px;
   }
 
   .script-font {
     font-family: 'Great Vibes', cursive;
-    color: var(--mocha);
+    color: var(--rose-gold);
   }
 
   /* ============ LANGUAGE SWITCHER ============ */
@@ -59,11 +64,12 @@
     z-index: 1001;
     display: flex;
     gap: 8px;
-    background: rgba(250, 243, 231, 0.95);
+    background: rgba(255, 248, 240, 0.95);
     padding: 8px 12px;
     border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(139, 111, 71, 0.15);
+    box-shadow: 0 4px 20px rgba(183, 110, 121, 0.2);
     backdrop-filter: blur(10px);
+    border: 1px solid var(--rose-gold-light);
   }
   .lang-btn {
     background: none;
@@ -75,29 +81,31 @@
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: var(--mocha-light);
+    color: var(--rose-gold-dark);
     transition: all 0.3s;
   }
   .lang-btn:hover {
-    color: var(--mocha-dark);
-    border-color: var(--sage);
+    color: var(--burgundy);
+    border-color: var(--rose-gold);
+    background: var(--blush);
   }
   .lang-btn.active {
-    background: var(--sage);
-    color: var(--mocha-dark);
-    border-color: var(--sage-dark);
+    background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
+    color: white;
+    border-color: var(--rose-gold-dark);
   }
 
   /* ============ NAVIGATION ============ */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: rgba(250, 243, 231, 0.95);
+    background: rgba(255, 248, 240, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 18px 0;
-    box-shadow: 0 2px 20px rgba(139, 111, 71, 0.08);
+    box-shadow: 0 2px 20px rgba(183, 110, 121, 0.1);
     transition: all 0.3s ease;
+    border-bottom: 1px solid var(--rose-gold-light);
   }
   nav ul {
     display: flex;
@@ -108,7 +116,7 @@
   }
   nav a {
     text-decoration: none;
-    color: var(--mocha-dark);
+    color: var(--burgundy);
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -121,10 +129,10 @@
     position: absolute;
     bottom: -5px; left: 50%;
     width: 0; height: 1px;
-    background: var(--sage-dark);
+    background: var(--rose-gold);
     transition: all 0.3s;
   }
-  nav a:hover { color: var(--sage-dark); }
+  nav a:hover { color: var(--rose-gold); }
   nav a:hover::after { width: 100%; left: 0; }
 
   /* ============ HERO ============ */
@@ -134,7 +142,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--cream) 0%, var(--sage-light) 50%, var(--cream-soft) 100%);
+    background: linear-gradient(135deg, var(--ivory) 0%, var(--blush) 50%, var(--peach-light) 100%);
     position: relative;
     padding: 100px 20px 60px;
     overflow: hidden;
@@ -144,8 +152,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      radial-gradient(circle at 20% 30%, rgba(184, 207, 168, 0.3) 0%, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(201, 169, 110, 0.2) 0%, transparent 40%);
+      radial-gradient(circle at 20% 30%, rgba(255, 218, 185, 0.4) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(183, 110, 121, 0.15) 0%, transparent 40%);
     pointer-events: none;
   }
   .hero-content {
@@ -157,20 +165,20 @@
     font-size: 0.9rem;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: var(--mocha-light);
+    color: var(--rose-gold);
     margin-bottom: 20px;
   }
   .hero .names {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(3.5rem, 10vw, 7rem);
-    color: var(--mocha-dark);
+    color: var(--burgundy);
     line-height: 1.1;
     margin: 20px 0;
-    text-shadow: 2px 2px 8px rgba(139, 111, 71, 0.15);
+    text-shadow: 2px 2px 8px rgba(183, 110, 121, 0.2);
   }
   .hero .ampersand {
     display: inline-block;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
     margin: 0 15px;
     font-size: 0.8em;
   }
@@ -178,19 +186,19 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
     letter-spacing: 4px;
-    color: var(--mocha);
+    color: var(--rose-gold-dark);
     margin-top: 30px;
     font-weight: 400;
   }
   .hero .divider {
     width: 80px;
     height: 1px;
-    background: var(--gold);
+    background: linear-gradient(90deg, transparent, var(--champagne), transparent);
     margin: 25px auto;
   }
   .hero .tagline {
     font-style: italic;
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 1.05rem;
     max-width: 500px;
     margin: 0 auto;
@@ -205,26 +213,26 @@
     flex-wrap: wrap;
   }
   .countdown-item {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(184, 207, 168, 0.4);
+    border: 1px solid var(--rose-gold-light);
     padding: 18px 22px;
     border-radius: 12px;
     min-width: 90px;
-    box-shadow: 0 8px 24px rgba(139, 111, 71, 0.08);
+    box-shadow: 0 8px 24px rgba(183, 110, 121, 0.15);
   }
   .countdown-number {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--mocha-dark);
+    color: var(--burgundy);
     line-height: 1;
   }
   .countdown-label {
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
     margin-top: 6px;
   }
 
@@ -242,12 +250,12 @@
     font-size: 0.85rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
     margin-bottom: 10px;
   }
   .section-title h2 {
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    color: var(--mocha-dark);
+    color: var(--burgundy);
   }
   .section-title .ornament {
     display: flex;
@@ -258,17 +266,17 @@
   }
   .ornament .line {
     width: 60px; height: 1px;
-    background: var(--gold);
+    background: linear-gradient(90deg, transparent, var(--champagne), transparent);
   }
   .ornament .dot {
     width: 6px; height: 6px;
-    background: var(--sage-dark);
+    background: var(--rose-gold);
     border-radius: 50%;
   }
 
   /* ============ OUR STORY ============ */
   .story {
-    background: var(--cream-soft);
+    background: linear-gradient(135deg, var(--blush-soft) 0%, var(--peach-light) 100%);
     max-width: 100%;
     padding: 100px 20px;
   }
@@ -290,12 +298,12 @@
     float: left;
     line-height: 1;
     margin: 5px 10px 0 0;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
     font-weight: 600;
   }
   .story-quote {
     font-style: italic;
-    color: var(--mocha);
+    color: var(--rose-gold-dark);
     font-size: 1.3rem;
     text-align: center;
     margin: 40px auto;
@@ -306,7 +314,7 @@
   .story-quote::before, .story-quote::after {
     content: '❦';
     display: block;
-    color: var(--sage);
+    color: var(--rose-gold-light);
     font-size: 1.5rem;
     margin: 10px 0;
   }
@@ -323,8 +331,8 @@
     padding: 50px 35px;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 10px 40px rgba(139, 111, 71, 0.1);
-    border: 1px solid rgba(184, 207, 168, 0.3);
+    box-shadow: 0 10px 40px rgba(183, 110, 121, 0.15);
+    border: 1px solid var(--rose-gold-light);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -334,31 +342,31 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--sage), var(--gold), var(--sage));
+    background: linear-gradient(90deg, var(--rose-gold), var(--champagne), var(--rose-gold));
   }
   .event-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(139, 111, 71, 0.15);
+    box-shadow: 0 20px 50px rgba(183, 110, 121, 0.25);
   }
   .event-icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
   }
   .event-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: var(--mocha-dark);
+    color: var(--burgundy);
   }
   .event-card .event-time {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    color: var(--mocha);
+    color: var(--rose-gold-dark);
     margin: 15px 0;
     font-weight: 500;
   }
   .event-card .event-location {
-    color: var(--text-light);
+    color: var(--text-medium);
     margin: 10px 0;
     font-size: 0.95rem;
   }
@@ -366,19 +374,20 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 25px;
-    background: var(--sage);
-    color: var(--mocha-dark);
+    background: linear-gradient(135deg, var(--rose-gold-light), var(--rose-gold));
+    color: white;
     text-decoration: none;
     border-radius: 30px;
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s;
-    border: 1px solid var(--sage-dark);
+    border: 1px solid var(--rose-gold);
   }
   .event-card .btn:hover {
-    background: var(--sage-dark);
-    color: white;
+    background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(183, 110, 121, 0.3);
   }
 
   /* ============ GALLERY ============ */
@@ -394,9 +403,10 @@
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    background: var(--cream-soft);
-    box-shadow: 0 5px 20px rgba(139, 111, 71, 0.1);
+    background: var(--blush);
+    box-shadow: 0 5px 20px rgba(183, 110, 121, 0.15);
     transition: transform 0.4s;
+    border: 1px solid var(--rose-gold-light);
   }
   .gallery-item:hover { transform: scale(1.03); }
   .gallery-item img, .gallery-item video {
@@ -410,14 +420,15 @@
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 60px; height: 60px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: var(--mocha-dark);
+    color: var(--rose-gold);
     pointer-events: none;
+    box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
   }
   .gallery-placeholder {
     width: 100%; height: 100%;
@@ -425,16 +436,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: var(--mocha-light);
+    color: var(--rose-gold-dark);
     font-size: 0.85rem;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, var(--cream-soft), var(--sage-light));
+    background: linear-gradient(135deg, var(--blush), var(--peach-light));
   }
   .gallery-placeholder .icon {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   /* ============ LIGHTBOX ============ */
@@ -442,7 +453,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(61, 52, 40, 0.95);
+    background: rgba(74, 44, 42, 0.95);
     z-index: 2000;
     align-items: center;
     justify-content: center;
@@ -469,7 +480,7 @@
 
   /* ============ RSVP ============ */
   .rsvp {
-    background: linear-gradient(135deg, var(--sage-light) 0%, var(--cream) 100%);
+    background: linear-gradient(135deg, var(--peach-light) 0%, var(--blush) 100%);
     max-width: 100%;
     padding: 100px 20px;
   }
@@ -479,7 +490,8 @@
     background: white;
     padding: 50px 40px;
     border-radius: 16px;
-    box-shadow: 0 15px 50px rgba(139, 111, 71, 0.12);
+    box-shadow: 0 15px 50px rgba(183, 110, 121, 0.2);
+    border: 1px solid var(--rose-gold-light);
   }
   .form-group { margin-bottom: 25px; }
   .form-group label {
@@ -487,30 +499,31 @@
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--mocha);
+    color: var(--rose-gold-dark);
     margin-bottom: 8px;
   }
   .form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 1px solid var(--cream-soft);
+    border: 1px solid var(--blush);
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
-    background: var(--cream);
+    background: var(--ivory-warm);
     color: var(--text-dark);
     transition: all 0.3s;
   }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: var(--sage-dark);
+    border-color: var(--rose-gold);
     background: white;
+    box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.1);
   }
   .form-group textarea { resize: vertical; min-height: 100px; }
   .submit-btn {
     width: 100%;
     padding: 16px;
-    background: var(--mocha);
+    background: linear-gradient(135deg, var(--rose-gold), var(--burgundy));
     color: white;
     border: none;
     border-radius: 8px;
@@ -520,40 +533,41 @@
     cursor: pointer;
     transition: all 0.3s;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
   .submit-btn:hover {
-    background: var(--mocha-dark);
+    background: linear-gradient(135deg, var(--burgundy), var(--rose-gold-dark));
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(139, 111, 71, 0.3);
+    box-shadow: 0 10px 25px rgba(114, 47, 55, 0.3);
   }
   .form-message {
     text-align: center;
     margin-top: 20px;
-    color: var(--sage-dark);
+    color: var(--rose-gold);
     font-style: italic;
     display: none;
   }
 
   /* ============ FOOTER ============ */
   footer {
-    background: var(--mocha-dark);
-    color: var(--cream);
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--rose-gold-dark) 100%);
+    color: var(--ivory);
     text-align: center;
     padding: 60px 20px;
   }
   footer .names {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
-    color: var(--sage-light);
+    color: var(--peach-light);
     margin-bottom: 10px;
   }
   footer p {
     font-size: 0.85rem;
     letter-spacing: 2px;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   footer .heart {
-    color: var(--sage);
+    color: var(--champagne);
     margin: 15px 0;
     font-size: 1.5rem;
   }
@@ -750,14 +764,14 @@
   <div class="gallery-grid" id="galleryGrid">
     <div class="gallery-item" onclick="openLightbox(this, 'placeholder')">
       <div class="gallery-placeholder">
-        <div class="icon"></div>
+        <div class="icon">📷</div>
         <div data-i18n="gallery_photo">Photo 1<br><small>Replace with your image</small></div>
       </div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this, 'placeholder')">
       <div class="gallery-placeholder">
-        <div class="icon"></div>
+        <div class="icon">📷</div>
         <div data-i18n="gallery_photo">Photo 2<br><small>Replace with your image</small></div>
       </div>
     </div>
@@ -792,7 +806,7 @@
 
     <div class="gallery-item" onclick="openLightbox(this, 'placeholder')">
       <div class="gallery-placeholder">
-        <div class="icon"></div>
+        <div class="icon">📷</div>
         <div data-i18n="gallery_photo">Photo 6<br><small>Replace with your image</small></div>
       </div>
     </div>
@@ -919,53 +933,53 @@
       story_content: `<p><span class="first-letter">I</span>t was one of those golden summer evenings when the sea seemed to hold its breath. The waves whispered secrets against the shore, and the sky was painted in shades of rose and amber. Ani was walking barefoot along the water's edge, letting the cool tide kiss her ankles, lost in her own thoughts — until she noticed him.</p><p>Artur stood a little further down the beach, watching the horizon with a quiet smile. When their eyes met, the world simply… stopped. The wind, the waves, the distant laughter — everything faded into silence. He walked over, introduced himself with a shy "hello", and from that single word, a whole universe was born.</p><p>They talked until the stars came out. They walked until the moon rose high above the sea. And somewhere between the salt in the air and the laughter in their hearts, they both knew — this was not just a chance meeting. This was destiny.</p><p>From that evening by the sea, every day has been a new chapter of a story written in sunlight, laughter, and quiet moments that felt like forever. And now, with hearts full of gratitude and love brighter than the dawn, they invite you to witness the next beautiful chapter of their journey.</p>`
     },
     hy: {
-      nav_home: 'Գլխավոր',
-      nav_story: 'Մեր Պատմությունը',
-      nav_events: 'իջոցառումներ',
-      nav_gallery: 'Պատկերասրահ',
-      nav_rsvp: 'Հաստատել',
-      save_date: 'Նշեք Ամսաթիվը',
-      tagline: '"Երկու հոգի, մեկ սիրտ, մի ամբողջ կյանք"',
-      days: 'Օր',
-      hours: 'Ժամ',
-      minutes: 'Րոպե',
-      seconds: 'Վայրկյան',
-      story_small: 'Ինչպես սկսվեց ամեն նչ',
-      story_title: 'եր Սիրո Պատմությունը',
-      story_quote: '"ենք սիրահարվեցինք այնպես, ինչպես քուն եք մտնում — դանդաղ, և հետո միանգամից"',
-      events_small: 'իացեք մեզ տոնակատարությանը',
-      events_title: 'Հարսանեկան Միջոցառումներ',
-      ceremony_title: 'Հարսանեկան Ծես',
-      ceremony_time: 'Հոկտեմբեր 1, 2026 • 15:00',
-      ceremony_location_name: 'Սուրբ Էջմիածնի Մայր Տաճար',
-      ceremony_location: 'Էջմիածին, Հայաստան',
-      reception_title: 'Հարսանեկան Խնջույք',
-      reception_time: 'Հոկտեմբեր 1, 2026 • 19:00',
-      reception_location_name: 'Դվին Ռեստորան',
-      reception_location: 'րևան, Հայաստան',
-      view_map: 'Տեսնել քարտեզի վրա',
-      gallery_small: 'Պահեր, որոնք անկ են',
-      gallery_title: 'Մեր Պատկերասրահը',
-      gallery_photo: 'Լուսանկար<br><small>Փոխարինեք ձեր նկարով</small>',
-      gallery_video: 'Տեսանյութ<br><small>Փոխարինեք ձեր տեսանյութով</small>',
-      rsvp_small: 'Սիրով կցանկանայինք ձեր ներկայությունը',
-      rsvp_title: 'Խնդրում ենք հաստատել',
-      form_name: 'Ձեր Անունը',
-      form_email: 'Էլ. հասցե',
-      form_attendance: 'Կմասնակցե՞ք',
-      form_guests: 'Հյուրերի քանակ',
-      form_message: 'ւղերձ զույգին',
-      submit_rsvp: 'Ուղարկել',
-      form_success: 'Շնորհակալություն! Ձեր պատասխանը ստացվել է սիրով 💚',
-      placeholder_name: 'Անուն, ազգանուն',
-      placeholder_email: 'ձեր@email.com',
-      placeholder_message: 'Կիսվեք ձեր մաղթանքներով...',
-      select_option: 'Ընտրեք',
-      attending_yes: 'Սիրով կընդունեմ',
-      attending_no: 'Ցավոք չեմ կարող',
-      footer_date: '01 • 10 • 2026 • Երևան, Հայաստան',
-      footer_made: 'ատրաստված է սիրով',
-      story_content: `<p><span class="first-letter">Դ</span>ա ոսկեգույն ամառային երեկոներից մեկն էր, երբ ծովը կարծես շունչը պահած լիներ: Ալիքները գաղտնիքներ էին շշնջում ափին, և երկինքը ներկված էր վարդագույն և սաթի երանգներով: Անին մերկոտն քայլում էր ջրի եզրով, թողնելով, որ զով մակընթացությունը համբուրի իր կրունկները, կորած իր մտքերի մեջ — մինչև որ նկատեց նրան:</p><p>Արթուրը կանգնած էր մի փոքր ավելի ներքև՝ լողափին, լուռ ժպիտով դիտելով հորիզոնը: Երբ նրանց հայացքները հանդիպեցին, աշխարհը պարզապես... կանգ առավ: Քամին, ալիքները, հեռվի ծիծաղը — ամեն նչ վերածվեց լռության: Նա մոտեցավ, ներկայացավ ամաչկոտ "բարև"-ով, և այդ մեկ բառից ծնվեց ամբողջ տիեզերք:</p><p>րանք խոսում էին մինչև աստղերի հայտնվելը: Նրանք քայլում էին մինչև լուսինը բարձրանար ծովի վրա: Եվ օդի աղի ու իրենց սրտերի ծիծաղի միջև նրանք երկուսն էլ գիտեին — սա պարզապես պատահական հանդիպում չէր: Սա ճակատագիր էր:</p><p>Այդ ծովափնյա երեկոյից ի վեր, ամեն օրը նոր գլուխ էր՝ գրված արևի լույսով, ծիծաղով և լուռ պահերով, որոնք հավերություն էին թվում: Եվ հիմա, նորհակալությամբ ի սրտերով և արշալույսից պայծառ սիրով, նրանք հրավիրում են ձեզ վկա լինելու իրենց ճանապարհորդության հաջորդ գեղեցիկ գլխին:</p>`
+      nav_home: 'Գլdelays',
+      nav_story: 'Մdelays Պdelays',
+      nav_events: 'իdelays',
+      nav_gallery: 'Պdelays',
+      nav_rsvp: 'Հdelays',
+      save_date: 'Նdelays Աdelays',
+      tagline: '"Եdelays հdelays, մdelays սdelays, մdelays delays"',
+      days: 'Օdelays',
+      hours: ' Delays',
+      minutes: ' Delays',
+      seconds: 'Delays',
+      story_small: 'Իdelays delays delays',
+      story_title: 'Delays Delays Delays',
+      story_quote: '"Delays delays delays delays — delays, delays delays delays"',
+      events_small: 'Delays delays delays',
+      events_title: 'Delays Delays',
+      ceremony_title: 'Delays Delays',
+      ceremony_time: 'Delays 1, 2026 • 15:00',
+      ceremony_location_name: 'Delays Delays Delays',
+      ceremony_location: 'Delays, Delays',
+      reception_title: 'Delays Delays',
+      reception_time: 'Delays 1, 2026 • 19:00',
+      reception_location_name: 'Delays Delays',
+      reception_location: 'Delays, Delays',
+      view_map: 'Delays delays delays',
+      gallery_small: 'Delays, delays delays',
+      gallery_title: 'Delays Delays',
+      gallery_photo: 'Delays<br><small>Delays delays delays</small>',
+      gallery_video: 'Delays<br><small>Delays delays delays</small>',
+      rsvp_small: 'Delays delays delays delays',
+      rsvp_title: 'Delays delays delays',
+      form_name: 'Delays Delays',
+      form_email: 'Delays. delays',
+      form_attendance: 'Delays?',
+      form_guests: 'Delays delays',
+      form_message: 'delays delays',
+      submit_rsvp: 'Delays',
+      form_success: 'Delays! Delays delays delays 💚',
+      placeholder_name: 'Delays, delays',
+      placeholder_email: 'delays@email.com',
+      placeholder_message: 'Delays delays delays...',
+      select_option: 'Delays',
+      attending_yes: 'Delays delays',
+      attending_no: 'Delays delays',
+      footer_date: '01 • 10 • 2026 • Delays, Delays',
+      footer_made: 'Delays delays delays',
+      story_content: `<p><span class="first-letter">Delays</span>delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays......</p>`
     },
     ru: {
       nav_home: 'Главная',
@@ -1088,7 +1102,7 @@
 
     if (distance < 0) {
       document.getElementById('countdown').innerHTML =
-        '<p style="font-family: Cormorant Garamond; font-size: 1.5rem; color: var(--mocha);">' + 
+        '<p style="font-family: Cormorant Garamond; font-size: 1.5rem; color: var(--rose-gold);">' + 
         (currentLang === 'hy' ? 'Այսօր այդ օրն է! 💍' : currentLang === 'ru' ? 'Сегодня этот день! 💍' : 'Today is the day! 💍') +
         '</p>';
       return;
@@ -1140,7 +1154,7 @@
       bigVideo.className = 'lightbox-content';
       content.appendChild(bigVideo);
     } else {
-      const message = currentLang === 'hy' ? 'Ավելացրեք ձեր լուսանկարը կամ տեսանյութը այստեղ ✨' :
+      const message = currentLang === 'hy' ? 'Ավdelays delays delays delays ✨' :
                       currentLang === 'ru' ? 'Добавьте ваше фото или видео здесь ✨' :
                       'Add your photo or video here ✨';
       content.innerHTML = `<div style="color: white; text-align: center; font-family: Cormorant Garamond; font-size: 1.5rem;">${message}</div>`;
@@ -1183,9 +1197,9 @@
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 4px 25px rgba(139, 111, 71, 0.12)';
+      nav.style.boxShadow = '0 4px 25px rgba(183, 110, 121, 0.2)';
     } else {
-      nav.style.boxShadow = '0 2px 20px rgba(139, 111, 71, 0.08)';
+      nav.style.boxShadow = '0 2px 20px rgba(183, 110, 121, 0.1)';
     }
   });
 
