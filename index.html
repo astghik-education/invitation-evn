@@ -633,10 +633,12 @@ const form=$('rsvpForm'),ok=$('rsvpSuccess');
 function waLink(){
   const name=$('f-name').value.trim(),phone=$('f-phone').value.trim();
   const guests=$('f-guests').value,msg=$('f-msg').value.trim();
-  const text='🎉 Նոր RSVP «Ընտանիք» կենտրոն\n\n👤 Անուն՝ '+name+
-             '\n📞 Հեռախոս՝ '+phone+
-             '\n👥 Հյուրեր՝ '+guests+
-             '\n💬 Նշում՝ '+(msg||'—');
+  const text='Նոր RSVP «Ընտանիք» կենտրոն\n\n'+
+             'Անուն՝ '+name+'\n'+
+             'Հեռախոս՝ '+phone+'\n'+
+             'Հյուրեր՝ '+guests+'\n'+
+             'Նշում՝ '+(msg||'-')+'\n'+
+             'Մասնակցում եմ 19.08.2026 բացմանը';
   return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text);
 }
 form.addEventListener('submit',e=>{
