@@ -105,7 +105,7 @@ nav a:hover{background:rgba(163,183,124,.25);color:var(--teal-d)}
   padding:64px 44px 52px;
 }
 .invite::before{
-  content:"🎉 ՄԵԾ ԲԱՑՈՒՄ";position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-2deg);
+  content:"🎉 ԵԾ ԲԱՑՈՒՄ";position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-2deg);
   background:var(--must);color:#fff;font-weight:900;letter-spacing:2px;
   padding:8px 26px;border-radius:999px;box-shadow:var(--shadow-sm);font-size:.9rem;
 }
@@ -321,12 +321,12 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
       <rect x="31.5" y="35.5" width="4" height="4" fill="#E7BA5F"/><rect x="37" y="35.5" width="4" height="4" fill="#E7BA5F"/>
       <path d="M58 10c-2.6-4.6-9.2-3-9.2 1.6 0 3.6 4.6 6.2 9.2 9.8 4.6-3.6 9.2-6.2 9.2-9.8C67.2 7 60.6 5.4 58 10z" fill="#C4795A"/>
     </svg>
-    <div class="kicker">ՀՐԱՎԵՐ</div>
+    <div class="kicker">ՀՐԱՎԵ</div>
     <h1 data-rainbow aria-label="Ընտանիք">Ընտանիք</h1>
     <div class="sub">Կրթական‑զարգացման կենտրոն</div>
     <p class="text">Սիրով հրավիրում ենք ձեզ մեր կենտրոնի բացման հանդիսավոր արարողությանը․ սպասվում են խաղեր, երաժշտություն, անակնկալներ և շատ ջերմություն 💚</p>
 
-    <div class="date-pill"> 19 օգոստոսի, 2026 • 12:00</div>
+    <div class="date-pill"> 19 օգոստոսի, 2026 • 11:00</div>
 
     <div class="count" id="countdown" aria-label="Հետհաշվարկ մինչև բացումը">
       <div class="cell"><span class="num" id="cd-d">00</span><span class="lbl">Օր</span></div>
@@ -350,8 +350,8 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 <!-- ══════════════════ TICKER ══════════════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="track">
-    <span>ՍԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛 ՍԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
-<span>ՍԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛 ՍԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
+    <span>ՍՐ 💚 ԶԱՐԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ  ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆՔ 💛 ԵՐ  ԶԱՐԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
+<span>ՍԵ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛 ՍՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
 
  </div>
 </div>
@@ -396,7 +396,7 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 <div id="lightbox" role="dialog" aria-label="Մեծացված նկար"><img alt=""></div>
 
 <!-- ══════════════════ VIDEO ══════════════════
-     🎬 ՏՍԱՆՅՈՒԹ ԱՎԵԼԱՑՆԵԼՈՒ ՀԱՄԱՐ․
+     🎬 ՏԱՆՅՈՒԹ ԱՎԵԼԱՑՆԵԼՈՒ ՀԱՄԱՐ․
      Ստեղծեք «video» թղթապանակը եւ դրեք ձեր տեսանյութը՝ opening.mp4 անունով։ -->
 <section id="video">
   <div class="wrap">
@@ -477,8 +477,12 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 </footer>
 
 <button id="musicBtn" aria-label="Միացնել երաժշտությունը" aria-pressed="false">🎵</button>
-<div id="musicHint"></div>
-<audio id="bgMusic" src="song.mp3.mp3" loop preload="auto" ></audio>
+<div id="musicHint">Միացրո՛ւ երաժշտությունը 🎵</div>
+
+<!-- 🎵 ՁԵՐ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ․ փոխեք src‑ը ձեր այլի անունով
+     (ֆայլը պետք է լինի index.html‑ի կողքին, օր․՝ song.mp3) -->
+<audio id="bgMusic" src="song.mp3.mp3" loop preload="auto"></audio>
+
 <script>
 'use strict';
 (function(){
@@ -536,7 +540,14 @@ const src=vid.querySelector('source');
 if(src)src.addEventListener('error',vidFail);
 setTimeout(()=>{if(vid.readyState===0)vidFail();},2500);
 
-/* ============ 8) HAPPY KIDS MUSIC (Web Audio, no file needed) ============ */
+/* ============ 8) MUSIC — plays YOUR file, built-in tune as fallback ============
+   🎵 Երգը փոխելու համար․ HTML‑ում գտեք <audio id="bgMusic" ...> տողը
+   եւ src‑ում գրեք ձեր ֆայլի անունը (օր․՝ src="kids.mp3")։          */
+const song=$('bgMusic'); song.volume=.9;
+let fileBroken=!!song.error;
+song.addEventListener('error',()=>{fileBroken=true;});
+
+/* --- built-in happy melody (only if the file is missing) --- */
 let ctx=null,master=null,timer=null,idx=0,cycle=0,startAt=0;
 const SPB=60/128;
 const MEL=[[72,1],[76,1],[79,1],[81,1],[84,2],[79,2],[81,1],[79,1],[76,1],[74,1],[72,2],[0,2],
@@ -569,21 +580,35 @@ function tick(){
     else break;
   }
 }
-const mBtn=$('musicBtn'),mHint=$('musicHint');
-function toggleMusic(){
+function startSynth(){
   if(!ctx){ctx=new (window.AudioContext||window.webkitAudioContext)();
     master=ctx.createGain();master.gain.value=.9;master.connect(ctx.destination);}
   ctx.resume();
-  if(timer){clearInterval(timer);timer=null;mBtn.classList.remove('playing');
-    mBtn.textContent='🎵';mBtn.setAttribute('aria-pressed','false');return;}
   startAt=ctx.currentTime+.06;idx=0;cycle=0;
   timer=setInterval(tick,40);tick();
-  mBtn.classList.add('playing');mBtn.textContent='🔊';mBtn.setAttribute('aria-pressed','true');
-  mHint.style.opacity='0';
+}
+function stopSynth(){if(timer){clearInterval(timer);timer=null;}}
+
+/* --- the 🎵 button: file first, synth if no file --- */
+const mBtn=$('musicBtn'),mHint=$('musicHint');
+let musicOn=false;
+function setBtn(on){
+  mBtn.classList.toggle('playing',on);
+  mBtn.textContent=on?'🔊':'';
+  mBtn.setAttribute('aria-pressed',String(on));
+  if(on)mHint.style.opacity='0';
+}
+function toggleMusic(){
+  if(musicOn){ musicOn=false; setBtn(false); song.pause(); stopSynth(); return; }
+  musicOn=true; setBtn(true);
+  if(!fileBroken){
+    const p=song.play();
+    if(p&&p.catch)p.catch(()=>{fileBroken=true;startSynth();});
+  }else startSynth();
 }
 mBtn.addEventListener('click',toggleMusic);
-setTimeout(()=>{if(!timer)mHint.style.opacity='1';},1500);
 mHint.addEventListener('click',toggleMusic);
+setTimeout(()=>{if(!musicOn)mHint.style.opacity='1';},1500);
 
 /* ============ 9) Confetti ============ */
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
