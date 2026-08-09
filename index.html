@@ -15,7 +15,7 @@
 
 <style>
 /* ============================================================
-   «ԸՆՏԱՆԻՔ» — logo palette design tokens
+   «ԸՆՏԱՆՔ» — logo palette design tokens
    sage #A3B77C | terracotta #C4795A | mustard #E7BA5F
    teal #7C948C | cream #FBF8F1 | ink #5A5548
 ============================================================ */
@@ -105,7 +105,7 @@ nav a:hover{background:rgba(163,183,124,.25);color:var(--teal-d)}
   padding:64px 44px 52px;
 }
 .invite::before{
-  content:"🎉 ՄԵԾ ԲԱՑՈՒՄ";position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-2deg);
+  content:"🎉 ՄԾ ԲԱՑՈՒՄ";position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-2deg);
   background:var(--must);color:#fff;font-weight:900;letter-spacing:2px;
   padding:8px 26px;border-radius:999px;box-shadow:var(--shadow-sm);font-size:.9rem;
 }
@@ -276,7 +276,6 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 <header>
   <div class="nav">
     <a class="logo" href="#home" aria-label="Ընտանիք — գլխավոր">
-      <!-- logo mark: house + branch + heart -->
       <svg class="mark" viewBox="0 0 72 44" aria-hidden="true">
         <path d="M22 20 C 17 15 15 10 15 5" fill="none" stroke="#A3B77C" stroke-width="3" stroke-linecap="round"/>
         <ellipse cx="11" cy="6" rx="5.5" ry="3.2" fill="#A3B77C" transform="rotate(-32 11 6)"/>
@@ -326,7 +325,7 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
     <div class="sub">Կրթական‑զարգացման կենտրոն</div>
     <p class="text">Սիրով հրավիրում ենք ձեզ մեր կենտրոնի բացման հանդիսավոր արարողությանը․ սպասվում են խաղեր, երաժշտություն, անակնկալներ և շատ ջերմություն 💚</p>
 
-    <div class="date-pill"> 19 օգոստոսի, 2026 • 11:00</div>
+    <div class="date-pill">🗓️ 19 օգոստոսի, 2026 • 12:00</div>
 
     <div class="count" id="countdown" aria-label="Հետհաշվարկ մինչև բացումը">
       <div class="cell"><span class="num" id="cd-d">00</span><span class="lbl">Օր</span></div>
@@ -350,31 +349,30 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 <!-- ══════════════════ TICKER ══════════════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="track">
-    <span>ՍՐ 💚 ԶԱՐԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ  ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆՔ 💛 ԵՐ  ԶԱՐԱՑՈՒՄ 💛 ԽՆԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
-<span>ՍԵ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛 ՍՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՆՏԱՆԻՔ 💛</span>
-
- </div>
+    <span>ՍԵ 💚 ԶԱԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՏԱՆՔ 💛 ԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՏԱՆՔ 💛</span>
+    <span>ՍԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՏԱՆՔ 💛 ԵՐ 💚 ԶԱՐԳԱՑՈՒՄ 💛 ԽԱՄՔ 💚 ԽԱՂ 💛 ԱՆՀԱՏԱԿԱՆ ՄՈՏԵՑՈՒՄ 💚 ԸՏԱՆՔ 💛</span>
+  </div>
 </div>
 
 <!-- ══════════════════ PROGRAMS ══════════════════ -->
 <section id="programs">
   <div class="wrap">
     <div class="sec-title reveal">
-      <h2 style="color:var(--terra)">Մեր ծրագիրը</h2>
+      <h2 style="color:var(--terra)">Մեր ծրագրերը</h2>
       <div class="line"></div>
       <p>«Ընտանիք»‑ում երեխաները սովորում են, ստեղծագործում և մեծանում ջերմ ու հոգատար միջավայրում՝ ինչպես երկրորդ տանը։</p>
     </div>
     <div class="cards">
       <div class="card reveal" style="--c:var(--teal)"><span class="ico">🌍</span><h3>Օտար լեզուներ</h3><p>Անգլերեն, ռուսերեն և այլն՝ խաղային ու ինտերակտիվ մեթոդներով։</p></div>
       <div class="card reveal" style="--c:var(--must-d)"><span class="ico">🫖</span><h3>Էթիկետ</h3><p>Վարվելակերպ, սեղանի կուլտուրա և հաղորդակցման հմտություններ։</p></div>
-      <div class="card reveal" style="--c:var(--sage-d)"><span class="ico">🎨</span><h3>Արտ թերապիա</h3><p>Նկարչություն, ձեռագործություն և ստեղծագործական խաղեր։</p></div>
-      <div class="card reveal" style="--c:var(--terra)"><span class="ico">🎈</span><h3>Խաղ ու զվարճանք</h3><p>Բակային խաղեր, միջոցառումներ, անակնկալներ և լավ տրամադրություն։</p></div>
+      <div class="card reveal" style="--c:var(--sage-d)"><span class="ico">🎨</span><h3>Արվեստի թերապիա</h3><p>Նկարչություն, ձեռագործություն և ստեղծագործական խաղեր։</p></div>
+      <div class="card reveal" style="--c:var(--terra)"><span class="ico">🎈</span><h3>Խաղ ու զվարանք</h3><p>Բակային խաղեր, միջոցառումներ, անակնկալներ և լավ տրամադրություն։</p></div>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════ GALLERY ══════════════════
-     🖼 ԼՈՒՍԱՆԿԱՐՆԵՐ ԱՎԵԼԱՑՆԵԼՈՒ ՀԱՄԱՐ․
+     🖼 ԼՈՒՍԱՆԱՐՆԵՐ ԱՎԵԼԱՑՆԼՈՒ ՀԱՄԱՐ․
      Ստեղծեք «images» թղթապանակը եւ դրեք նկարները հետեւյալ անուններով՝
      lezuner.jpg, etiket.jpg, arvest.jpg, khagher.jpg
      (Կամ փոխեք src‑ը ձեր ցանկացած նկարի անունով) -->
@@ -386,7 +384,7 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
       <p>Մի փոքրիկ հայացք մեր առօրյային․ սեղմեք նկարին՝ մեծացնելու համար։</p>
     </div>
     <div class="gallery">
-      <figure class="reveal"><img src="images/lezuner.jpg.PNG" alt="Օտար լեզուների դասընթաց" loading="lazy" data-fallback><figcaption>🌍 Օտար լեզուներ</figcaption></figure>
+      <figure class="reveal"><img src="images/lezuner.jpg.PNG" alt="Օտար եզուների դասընթաց" loading="lazy" data-fallback><figcaption>🌍 Օտար լեզուներ</figcaption></figure>
       <figure class="reveal"><img src="images/etiket.jpg.PNG" alt="Էթիկետի դասընթաց" loading="lazy" data-fallback><figcaption>🫖 Էթիկետ</figcaption></figure>
       <figure class="reveal"><img src="images/arvest.jpg.PNG" alt="Արտ թերապիա" loading="lazy" data-fallback><figcaption>🎨 Արտ թերապիա</figcaption></figure>
       <figure class="reveal"><img src="images/khagher.jpg.PNG" alt="Խաղեր և զվարճանք" loading="lazy" data-fallback><figcaption>🎈 Խաղ ու զվարճանք</figcaption></figure>
@@ -396,7 +394,7 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
 <div id="lightbox" role="dialog" aria-label="Մեծացված նկար"><img alt=""></div>
 
 <!-- ══════════════════ VIDEO ══════════════════
-     🎬 ՏԱՆՅՈՒԹ ԱՎԵԼԱՑՆԵԼՈՒ ՀԱՄԱՐ․
+     🎬 ԵՍԱՆՅՈՒԹ ԱՎԵԼԱՑՆԵԼՈՒ ՀԱՄԱՐ․
      Ստեղծեք «video» թղթապանակը եւ դրեք ձեր տեսանյութը՝ opening.mp4 անունով։ -->
 <section id="video">
   <div class="wrap">
@@ -432,7 +430,7 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
   </div>
 </section>
 
-<!-- ══════════════════ RSVP ══════════════════ -->
+<!-- ══════════════════ RSVP → WHATSAPP ══════════════════ -->
 <section id="rsvp">
   <div class="wrap">
     <div class="sec-title reveal">
@@ -457,10 +455,10 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
       <div class="rsvp-success" id="rsvpSuccess">
         <div class="big">🎉</div>
         <h3>Շնորհակալություն, <span id="successName"></span>․</h3>
-        <p>Ձեր մասնակցությունը գրանցված է։<br>Սպասում ենք ձեզ <strong>19․08․2026‑ին, ժամը 12:00‑ին</strong> — Արտաշատ, Գայի 5 💚</p>
+        <p>Ձեր հայտը բացվեց WhatsApp‑ում․ սեղմեք <b>ուղարկել</b> 🚀<br>Սպասում ենք ձեզ <strong>19․08․2026‑ին, ժամը 12:00‑ին</strong> — Արտաշատ, Գայի 5 💚</p>
         <div class="actions">
-          <a class="btn sage" href="tel:+37433330201">📞 Զանգահարել</a>
-          <a class="btn ghost" id="smsBtn" href="#">✉️ SMS ուղարկել</a>
+          <a class="btn sage" href="tel:+37433330201">📞 անգահարել</a>
+          <a class="btn ghost" id="waBtn" target="_blank" rel="noopener" href="https://wa.me/37433330201">💬 WhatsApp‑ով ուղարկել</a>
           <button class="btn" id="editRsvp" type="button" style="background:var(--teal)">Փոխել տվյալները</button>
         </div>
       </div>
@@ -473,13 +471,13 @@ footer .hearts{margin-top:14px;font-size:1.1rem;letter-spacing:6px}
   <div class="word" data-rainbow>Ընտանիք</div>
   <p>Կրթական կենտրոն • Արտաշատ, Գայի 5 • 033 330 201</p>
   <p>© 2026 «Ընտանիք» • Պատրաստված է սիրով</p>
-  <div class="hearts">💚  🧡 💚 💛</div>
+  <div class="hearts">💚 🧡 💚 💛</div>
 </footer>
 
 <button id="musicBtn" aria-label="Միացնել երաժշտությունը" aria-pressed="false">🎵</button>
 <div id="musicHint">Միացրո՛ւ երաժշտությունը 🎵</div>
 
-<!-- 🎵 ՁԵՐ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ․ փոխեք src‑ը ձեր այլի անունով
+<!-- 🎵 ԵՐ ԵՐԱԺՇՏՈՒԹՅՈՒՆԸ․ փոխեք src‑ը ձեր ֆայլի անունով
      (ֆայլը պետք է լինի index.html‑ի կողքին, օր․՝ song.mp3) -->
 <audio id="bgMusic" src="song.mp3.mp3" loop preload="auto"></audio>
 
@@ -589,12 +587,11 @@ function startSynth(){
 }
 function stopSynth(){if(timer){clearInterval(timer);timer=null;}}
 
-/* --- the 🎵 button: file first, synth if no file --- */
 const mBtn=$('musicBtn'),mHint=$('musicHint');
 let musicOn=false;
 function setBtn(on){
   mBtn.classList.toggle('playing',on);
-  mBtn.textContent=on?'🔊':'';
+  mBtn.textContent=on?'🔊':'🎵';
   mBtn.setAttribute('aria-pressed',String(on));
   if(on)mHint.style.opacity='0';
 }
@@ -611,7 +608,7 @@ mHint.addEventListener('click',toggleMusic);
 setTimeout(()=>{if(!musicOn)mHint.style.opacity='1';},1500);
 
 /* ============ 9) Confetti ============ */
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced=matchMedia('(prefers-reduced-motion: reduce').matches;
 function confetti(n=160){
   if(reduced)return;
   const c=document.createElement('canvas');
@@ -628,18 +625,28 @@ function confetti(n=160){
 }
 confetti(120);
 
-/* ============ 10) RSVP ============ */
+/* ============ 10) RSVP → WHATSAPP ============
+   💬 Հյուրը լրացնում է ձևը → բացվում է WhatsApp‑ը՝ պատրաստի
+   նամակով → սեղմում է «ուղարկել» → նամակը գալիս է ՔԵԶ։      */
+const WA_NUMBER='37433330201'; // ← ձեր WhatsApp համարը (առանց + և բացատների)
 const form=$('rsvpForm'),ok=$('rsvpSuccess');
+function waLink(){
+  const name=$('f-name').value.trim(),phone=$('f-phone').value.trim();
+  const guests=$('f-guests').value,msg=$('f-msg').value.trim();
+  const text='🎉 Նոր RSVP «Ընտանիք» կենտրոն\n\n👤 Անուն՝ '+name+
+             '\n📞 Հեռախոս՝ '+phone+
+             '\n👥 Հյուրեր՝ '+guests+
+             '\n💬 Նշում՝ '+(msg||'—');
+  return 'https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(text);
+}
 form.addEventListener('submit',e=>{
   e.preventDefault();
   const name=$('f-name').value.trim(),phone=$('f-phone').value.trim();
   if(!name||!phone){alert('Խնդրում ենք լրացնել անունը եւ հեռախոսահամարը 🙏');return;}
-  const guests=$('f-guests').value,msg=$('f-msg').value.trim();
-  try{const all=JSON.parse(localStorage.getItem('rsvp')||'[]');
-    all.push({name,phone,guests,msg,at:new Date().toISOString()});
-    localStorage.setItem('rsvp',JSON.stringify(all));}catch(_){}
+  const link=waLink();
+  $('waBtn').href=link;
+  window.open(link,'_blank');
   $('successName').textContent=name;
-  $('smsBtn').href='sms:+37433330201?body='+encodeURIComponent('Բարեւ! Ես՝ '+name+'։ Մասնակցում եմ բացմանը ('+guests+' հոգի)։');
   form.style.display='none';ok.style.display='block';
   confetti(200);
 });
